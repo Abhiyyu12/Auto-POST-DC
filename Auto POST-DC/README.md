@@ -1,92 +1,86 @@
-```markdown
+Berikut **versi bahasa Inggris** dari teks Markdown yang kamu kirim, **siap langsung dipakai sebagai `README.md`**:
+
+````markdown
 # Auto POST-DC
 
-Sebuah **web dashboard controller** berbasis Flask yang simpel, modern, dan powerful untuk mengatur **auto-posting pesan otomatis ke channel Discord** menggunakan multiple akun (multi-account).
+A **simple, modern, and powerful Flask-based web dashboard controller** for managing **automatic message posting to Discord channels** using multiple accounts (multi-account support).
 
-## Fitur Utama
-- Tambah, edit, hapus akun Discord (menggunakan token)
-- Kelola channel target dengan pesan custom dan interval waktu (minimal 5 detik)
-- Start / Stop posting per channel secara independen
-- Logging real-time (10 log terakhir per channel)
-- Optional: Kirim log sukses/gagal ke Discord webhook
+## Main Features
+- Add, edit, and delete Discord accounts (using tokens)
+- Manage target channels with custom messages and time intervals (minimum 5 seconds)
+- Start / Stop posting per channel independently
+- Real-time logging (last 10 logs per channel)
+- Optional: Send success/failure logs to a Discord webhook
 - Dark / Light mode toggle
-- Sidebar collapsible yang presisi dan responsif
-- Desain UI modern dengan Bootstrap 5 + animasi halus
+- Precise and responsive collapsible sidebar
+- Modern UI design with Bootstrap 5 + smooth animations
 
 ## Screenshot
-*(Tambahkan screenshot dashboard kamu di sini nanti untuk membuat repo lebih menarik)*
+*(Add your dashboard screenshot here later to make the repository more attractive)*
 
 ![Auto POST-DC Dashboard](https://via.placeholder.com/1200x600?text=Auto+POST-DC+Dashboard+Screenshot)  
-*(Ganti dengan screenshot asli setelah kamu upload ke repo atau Imgur)*
+*(Replace this with a real screenshot after uploading it to the repository or Imgur)*
 
-## Cara Instalasi & Menjalankan
+## Installation & Running
 
-1. **Clone repository**
+1. **Clone the repository**
    ```bash
    git clone https://github.com/Abhiyyu12/Auto-POST-DC.git
    cd Auto-POST-DC
-   ```
+````
 
 2. **Install dependencies**
+
    ```bash
    pip install -r requirements.txt
    ```
 
-3. **Jalankan aplikasi**
+3. **Run the application**
+
    ```bash
    python app.py
    ```
 
-4. Buka di browser:
+4. Open in your browser:
+
    ```
    http://localhost:3000
    ```
 
-## Struktur Project
+## Project Structure
+
 ```
 Auto-POST-DC/
-├── app.py                # Entry point Flask
-├── utils.py              # Fungsi config & webhook log
-├── threads.py            # Manajemen thread posting & logging
+├── app.py                # Flask entry point
+├── utils.py              # Config & webhook logging helpers
+├── threads.py            # Posting thread & logging management
 ├── templates/
-│   └── index.html        # UI dashboard utama
-├── config.json           # Dibuat otomatis (jangan commit token!)
+│   └── index.html        # Main dashboard UI
+├── config.json           # Auto-generated (DO NOT commit tokens!)
 ├── requirements.txt
-├── README.md             # Dokumentasi ini
+├── README.md             # This documentation
 └── .gitignore
 ```
 
-## Penggunaan
-- **Accounts** → Tambah token Discord (gunakan alt account untuk aman)
-- **Webhooks** → Tambah webhook Discord untuk notifikasi log (opsional)
-- **Channels** → Atur channel ID, pesan, interval, pilih akun & webhook
-- Klik **Start** untuk aktifkan auto-post, **Stop** untuk hentikan
-- Log otomatis refresh setiap 1.5 detik
+## Usage
 
-## Keamanan Penting ⚠️
-- **JANGAN pernah commit `config.json` yang berisi token Discord asli!**
-- File `config.json` sudah di-ignore oleh `.gitignore`
-- Gunakan token dari akun alternatif untuk menghindari rate limit atau banned
+* **Accounts** → Add Discord tokens (use alt accounts for safety)
+* **Webhooks** → Add Discord webhooks for log notifications (optional)
+* **Channels** → Set channel ID, message, interval, select account & webhook
+* Click **Start** to enable auto-posting, **Stop** to disable it
+* Logs refresh automatically every 1.5 seconds
 
-## Credit
-- Original base code oleh **Ke200**
-- Refactor, modularisasi, fix sidebar, dan improvement oleh **Abhiyyu12**
+## Important Security Notice ⚠️
 
----
+* **NEVER commit `config.json` containing real Discord tokens**
+* `config.json` is already ignored by `.gitignore`
+* Use alternative Discord accounts to avoid rate limits or bans
 
-**Auto POST-DC** – Posting otomatis ke Discord jadi mudah dan rapi! 🚀
+## Credits
 
-Kalau ada issue atau saran fitur baru, buka Issue di repo ini ya!
+* Original base code by **Ke200**
+* Refactor, modularization, sidebar fixes, and improvements by **Abhiyyu12**
+
+
+Tinggal bilang 👍
 ```
-
-Simpan seluruh teks di atas sebagai file **README.md** di root folder project kamu (https://github.com/Abhiyyu12/Auto-POST-DC).
-
-Setelah itu tinggal commit & push:
-
-```bash
-git add README.md
-git commit -m "Add complete README"
-git push origin main
-```
-
-Repo kamu sekarang sudah punya README yang rapi, profesional, dan lengkap dalam **satu file** saja seperti yang kamu minta. Selamat! 🔥
